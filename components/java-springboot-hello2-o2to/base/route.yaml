@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: java-springboot-hello2-o2to
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: java-springboot-hello2-o2to
+    app.kubernetes.io/part-of: s
+  name: java-springboot-hello2-o2to
+  namespace: burrzinga-hac-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: java-springboot-hello2-o2to
+    weight: null
+status: {}
