@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: java-springboot-hello2-o2to
+  namespace: burrzinga-hac-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/stonesoupuicluster/burrzinga-hac-tenant/s/java-springboot-hello2-o2to@sha256:98999124608bf50d8cdc60e60f76f455f656eb4f1b820b886cedb88e3dac3fd3
+        name: my-java-springboot
+        resources: {}
+status: {}
